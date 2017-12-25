@@ -7,7 +7,7 @@ import sys
 
 # 使用 Paramiko示例文件的密钥
 #host_key = paramiko.RSAKey(filename='test_rsa.key')
-host_key = paramiko.RSAKey(filename='/root/.ssh/id_rsa')
+#host_key = paramiko.RSAKey(filename='/root/.ssh/id_rsa')
 
 class Server(paramiko.ServerInterface):
     def __init__(self):
@@ -20,6 +20,8 @@ class Server(paramiko.ServerInterface):
             return paramiko.AUTH_SUCCESSFUL
         return paramiko.AUTH_FAILED
 
+
+paramiko.util.log_to_file("filename.log")
 server = sys.argv[1]
 ssh_port = int(sys.argv[2])
 try:
@@ -36,8 +38,9 @@ except Exception, e:
 print '[+] Got a connection!'
 
 try:
+    #建立个通道
     bhSession = paramiko.Transport(client)
-    bhSession.add_server_key(host_key)
+  #  bhSession.add_server_key(host_key)
     server = Server()
     try:
         bhSession.start_server(server=server)

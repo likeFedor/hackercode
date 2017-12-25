@@ -16,5 +16,5 @@ def ssh_command(ip, user, passwd, command):
     return
 
 #调用函数,以用户pi及其密码连接我自己的树莓派,并执行id这个命令
-ssh_command('192.168.88.105', 'pi', 'raspberry', 'id')
+ssh_command('127.0.0.1', 'root', 'lovepython', 'id')
 

