@@ -40,7 +40,7 @@ print '[+] Got a connection!'
 try:
     #建立个通道
     bhSession = paramiko.Transport(client)
-    bhSession.add_server_key(host_key)
+  #  bhSession.add_server_key(host_key)
     server = Server()
     try:
         bhSession.start_server(server=server)
