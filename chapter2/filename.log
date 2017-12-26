@@ -1,13 +1,20 @@
-DEB [20171225-15:41:09.289] thr=1   paramiko.transport: starting thread (server mode): 0x2c0a9b0L
-DEB [20171225-15:41:09.289] thr=1   paramiko.transport: Local version/idstring: SSH-2.0-paramiko_2.1.2
-DEB [20171225-15:41:09.289] thr=1   paramiko.transport: Remote version/idstring: SSH-2.0-paramiko_2.1.2
-INF [20171225-15:41:09.289] thr=1   paramiko.transport: Connected (version 2.0, client paramiko_2.1.2)
-DEB [20171225-15:41:09.290] thr=1   paramiko.transport: kex algos:[u'diffie-hellman-group1-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group-exchange-sha256'] server key:[u'ssh-rsa', u'ssh-dss', u'ecdsa-sha2-nistp256', u'ecdsa-sha2-nistp384', u'ecdsa-sha2-nistp521'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'aes128-cbc', u'blowfish-cbc', u'aes192-cbc', u'aes256-cbc', u'3des-cbc', u'arcfour128', u'arcfour256'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'aes128-cbc', u'blowfish-cbc', u'aes192-cbc', u'aes256-cbc', u'3des-cbc', u'arcfour128', u'arcfour256'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-md5', u'hmac-sha1-96', u'hmac-md5-96', u'hmac-sha1'] server mac:[u'hmac-sha2-256', u'hmac-sha2-51DEB [20171225-15:41:09.290] thr=1   paramiko.transport: Kex agreed: diffie-hellman-group1-sha1
-ERR [20171225-15:41:09.290] thr=1   paramiko.transport: Exception: Incompatible ssh peer (no acceptable host key)
-ERR [20171225-15:41:09.290] thr=1   paramiko.transport: Traceback (most recent call last):
-ERR [20171225-15:41:09.290] thr=1   paramiko.transport:   File "C:\Users\Wcy\AppData\Roaming\Python\Python27\site-packages\paramiko\transport.py", line 1787, in run
-ERR [ERR [20171225-15:41:09.292] thr=1   paramiko.transport:   File "C:\Users\Wcy\AppData\RoamingERR [20171225-15:41:09.292] thr=1   paramiko.transport:   File "C:\Users\WERR [20171225-15:41:09.292] thr=1   paramiko.transport:     self._handler_table[ptype](self, m)
-ERR [20171225-15:41:09.292] thr=1   paramiko.transport:   File "C:\Users\Wcy\AppData\RoamingERR [20171225-15:41:09.292] thr=1   paramiko.transport:   File "C:\Users\Wcy\AppData\RERR [20171225-15:41:09.292] thr=1   paramiko.transport:     self._parse_kex_init(m)
-ERR [20171225-15:41:09.292] thr=1   paramiko.transport:   File "C:\Users\Wcy\AppData\Roaming\Python\Python27\site-packages\paramiko\transERR [20171225-15:41:09.292] thr=1   paramERR [20171225-15:41:09.292] thr=1   paramiko.transport:     raise SSHException('Incompatible ssh peer (no acceptable host key)')
-ERR [20171225-15:41:09.292] thr=1   paramiko.transport: SSHException: Incompatible ssh peer (no acceptable host key)
-ERR [20171225-15:41:09.292] thr=1   paramiko.transport: 
+DEB [20171226-14:10:39.213] thr=1   paramiko.transport: starting thread (server mode): 0x2cfbcb0L
+DEB [20171226-14:10:39.213] thr=1   paramiko.transport: Local version/idstring: SSH-2.0-paramiko_2.1.2
+DEB [20171226-14:10:39.213] thr=1   paramiko.transport: Remote version/idstring: SSH-2.0-paramiko_2.1.2
+INF [20171226-14:10:39.213] thr=1   paramiko.transport: Connected (version 2.0, client paramiko_2.1.2)
+DEB [20171226-14:10:39.214] thr=1   paramiko.transport: kex algos:[u'diffie-hellman-group1-sha1', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'aes128-cbc', u'blowfish-cbc', u'aes192-cbc', u'aes256-cbc', u'3des-cbc', u'arcfour128', u'arcfour256'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'aes128-cbc', u'blowfish-cbc', u'aes192-cbc', u'aes256-cbc', u'3des-cbc', u'arcfour128', u'arcfour256'] client mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-md5', u'hmac-sha1-96', u'hmac-md5-96', u'hmac-sha1'] server mac:[u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-md5', u'hmac-sha1-96', u'hmac-md5-96', u'hmac-sha1'] client compress:[u'none'] server compress:[u'none'] client lang:[u''] server lang:[u''] kex follows?False
+DEB [20171226-14:10:39.214] thr=1   paramiko.transport: Kex agreed: diffie-hellman-group1-sha1
+DEB [20171226-14:10:39.214] thr=1   paramiko.transport: Cipher agreed: aes128-ctr
+DEB [20171226-14:10:39.214] thr=1   paramiko.transport: MAC agreed: hmac-sha2-256
+DEB [20171226-14:10:39.214] thr=1   paramiko.transport: Compression agreed: none
+DEB [20171226-14:10:39.302] thr=1   paramiko.transport: kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEB [20171226-14:10:39.302] thr=1   paramiko.transport: Switch to new keys ...
+DEB [20171226-14:10:39.312] thr=2   paramiko.transport: Adding ssh-rsa host key for [127.0.0.1]:6888: 60733844cb5186657fdedaa22b5a57d5
+DEB [20171226-14:10:39.316] DEB [20171226-14:10:39.325] thr=1   paramiko.transport: Auth request (type=publickey) service=ssh-connection, username=root
+INF [20171226-14:10:39.325] thr=1   paramiko.transport: AutDEB [20171226-14:10:39.32DEB [20171226-14:10:39.332] thr=1   paramiko.transport: Auth request (type=password) service=ssh-connection, username=root
+INF [20171226-14:10:39.332] thr=1   paramiko.transport: Auth granted (password).
+DEB [20171226-14:10:39.335] thr=1   paramiko.transport: [chan 0] Max packet in: 32768 bytes
+DEB [20171226-14:10:39.335] thr=1   paramiko.transport: [chan 0] Max packet out: 32768 bytes
+DEB [20171226-14:10:39.335] thr=1 DEB [20171226-14:10:39.335] thr=1   paramiko.transport: [DEB [20171226-14:10:39.336] thr=1   paramiko.transport: [chan 0] EOF received (0)
+DEB [20171226-14:10:39.338] thr=1   paramiko.transport: [chan 0] EOF sent (0)
+ERR [20171226-14:10:39.339] thr=1  DEB [20171226-14:10:39.341] thr=1   paramiko.transport: [chan 0] EOF received (0)

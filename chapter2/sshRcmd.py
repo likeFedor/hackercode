@@ -11,7 +11,8 @@ def ssh_command(ip, user, passwd, command, port = 22):
     client.connect(ip, port, username=user, password=passwd)  #连接
     ssh_session = client.get_transport().open_session() #打开会话
     if ssh_session.active:
-        ssh_session.exec_command(command)   #执行命令
+        ssh_session.send(command)
+       # ssh_session.exec_command(command)   #执行命令,这个是linux的命令，并且完整的ssh服务器才会响应命令
         print ssh_session.recv(1024)    #返回命令执行结果(1024个字符)
         while True:
             command = ssh_session.recv(1024)    #从ssh服务器获取命令
@@ -23,4 +24,4 @@ def ssh_command(ip, user, passwd, command, port = 22):
         client.close()
     return
 paramiko.util.log_to_file("filename.log")
-ssh_command('127.0.0.1', 'root', 'lovepython', 'ClientConnected', 6888)
+ssh_command('127.0.0.1', 'root', 'lovepython', 'ipconfig', 6888)

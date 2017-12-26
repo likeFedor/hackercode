@@ -6,7 +6,7 @@ import threading
 import sys
 
 # 使用 Paramiko示例文件的密钥
-#host_key = paramiko.RSAKey(filename='test_rsa.key')
+host_key = paramiko.RSAKey(filename='test_rsa.key')
 #host_key = paramiko.RSAKey(filename='/root/.ssh/id_rsa')
 
 class Server(paramiko.ServerInterface):
@@ -14,7 +14,8 @@ class Server(paramiko.ServerInterface):
         self.event = threading.Event()
     def check_channel_request(self, kind, chanid):
         if kind == 'session':
-            return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
+            return paramiko.OPEN_SUCCEEDED
+        return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
     def check_auth_password(self, username, password):
         if (username == 'root') and (password == 'lovepython'):
             return paramiko.AUTH_SUCCESSFUL
