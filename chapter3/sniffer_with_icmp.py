@@ -6,7 +6,7 @@ import struct
 from ctypes import *
 
 # 监听主机，即监听那个网络接口，下面的ip为我的kali的ip
-host = "10.10.10.145"
+host = "192.168.1.19"
 
 # ip头定义
 class IP(Structure):

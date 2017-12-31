@@ -1,4 +1,4 @@
-#-*- coding:utf8 -*-
+#-*- coding:utf-8 -*-
 
 import socket
 import os
@@ -6,10 +6,11 @@ import struct
 from ctypes import *
 
 # 监听主机，即监听那个网络接口，下面的ip为我的kali的ip
-host = "10.10.10.145"
+host = "192.168.1.19"
 
 # ip头定义
 class IP(Structure):
+    #用法？？？？？？？？？ 与下面的struct.pack有关系
     _fields_ = [
         ("ihl",             c_ubyte, 4),    #ip head length:头长度
         ("version",         c_ubyte, 4),    #版本
@@ -30,10 +31,10 @@ class IP(Structure):
 
     # __init__(self, *args, **kwargs) 创建完对象后调用，对当前对象的实例的一些初始化，无返回值,即在调用__new__之后，根据返回的实例初始化；注意，这里的第一个参数是self即对象本身【注意和new的区别】
     def __init__(self, socket_buffer=None):
-        # 协议字段与协议名称的对应
+        # 自定义一个数组，协议字段与协议名称的对应
         self.protocol_map = {1:"ICMP", 6:"TCP", 17:"UDP"}
 
-        # 可读性更强的ip地址(转换32位打包的IPV4地址为IP地址的标准点号分隔字符串表示。)
+        # 可读性更强的ip地址(转换32位打包的IPV4地址为IP地址的标准点号分隔字符串表示。)？？？？？？？
         self.src_address = socket.inet_ntoa(struct.pack("<L", self.src))
         self.dst_address = socket.inet_ntoa(struct.pack("<L", self.dst))
 
